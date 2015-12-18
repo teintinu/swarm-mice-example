@@ -6,11 +6,7 @@ class Mice extends Component {
 
   render() {
     return <div>
-      {this.props.data.map((item) => {
-        return <Wrapper spec={item.spec()}>
-          <Mouse />
-        </Wrapper>
-      })}
+      {this.props.data.map((item) => <Mouse  spec={item.spec()} />)}
     </div>
   }
 
