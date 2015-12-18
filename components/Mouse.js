@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'swarm-react'
 import { mouse } from './mice.css'
 
-export default class Mouse extends Component {
+class Mouse extends Component {
 
   render() {
     return <span className={mouse} style={{
@@ -11,3 +12,5 @@ export default class Mouse extends Component {
   }
 
 }
+
+export default connect(Mouse)

@@ -11,7 +11,7 @@
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "swarm-client": "^1.0.6",
-    "swarm-react": "^0.1.1",
+    "swarm-react": "^0.2.0",
     "swarm-server": "^1.0.5"
   },
   "devDependencies": {

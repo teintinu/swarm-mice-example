@@ -9,9 +9,7 @@ export default class App extends Component {
 
   render() {
     return <div className={cx(app, {[appConnected]: true})} >
-      <Wrapper spec={this.props.spec}>
-        <Mice />
-      </Wrapper>
+      <Mice spec={this.props.spec} />
     </div>
   }
 
