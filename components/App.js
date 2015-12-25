@@ -1,9 +1,11 @@
 import React, { Component, PropTypes } from 'react'
 import cx from 'classnames'
-import { app } from './mice.css'
 import { Wrapper } from 'swarm-react'
-import { Host } from 'swarm-syncable'
 import Mice from './Mice'
+import {
+  app ,
+  appConnected
+} from './mice.css'
 
 export default class App extends Component {
 
@@ -16,5 +18,5 @@ export default class App extends Component {
 }
 
 App.contextTypes = {
-  swarm: PropTypes.instanceOf(Host)
+  swarm:PropTypes.shape({ get: PropTypes.func.isRequired })
 }
