@@ -5,9 +5,9 @@ import Mouse from './Mouse'
 class Mice extends Component {
 
   render() {
-    return <div>
-      {this.props.data.map((item) => <Mouse  spec={item.spec()} />)}
-    </div>
+    return <span>
+      {this.props.data.map((item, i) => <Mouse key={i} spec={item.spec().toString()} />)}
+    </span>
   }
 
 }

@@ -12,6 +12,7 @@ config.entry.unshift('webpack-hot-middleware/client')
 config.devtool = 'cheap-module-eval-source-map'
 config.plugins = [
   new webpack.optimize.OccurenceOrderPlugin(),
+  new webpack.optimize.DedupePlugin(),
   new webpack.HotModuleReplacementPlugin(),
   new webpack.NoErrorsPlugin()
 ]

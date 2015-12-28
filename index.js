@@ -1,10 +1,8 @@
 // import 'babel-core/polyfill'
 import React from 'react'
 import { render } from 'react-dom'
-import { Client, base64 } from 'swarm-browser'
+import Swarm, { Client, base64 } from 'swarm-browser'
 import { Provider } from 'swarm-react'
-import levelup from 'levelup'
-import level from 'level-js'
 
 import App from './components/App'
 
@@ -27,7 +25,6 @@ app.swarm = new Client({
 })
 
 function start() {
-  console.log(1)
   app.mouse = app.swarm.get('/Model#' + app.id)
   app.mouse.onInit(() => {
     app.mouse.set({
@@ -47,10 +44,9 @@ function start() {
     app.swarm.close()
   }
 
-  debugger
   render(
     <Provider swarm={app.swarm.host}>
-      <App spec='/Set#mice'/>
+      <App mice={app.mice} mouse={app.mouse} />
     </Provider>,
     document.getElementById('app')
   )

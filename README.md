@@ -3,7 +3,8 @@
 ## Install & Run
 ```bash
 $ npm i
-$ npm start
+$ npm run server
+$ npm start # in another terminal process
 ```
 
 ## License

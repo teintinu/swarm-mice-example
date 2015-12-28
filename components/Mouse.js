@@ -6,8 +6,8 @@ class Mouse extends Component {
 
   render() {
     return <span className={mouse} style={{
-      top: this.props.data.x + 'px',
-      left: this.props.data.y + 'px'
+      top: this.props.data.y + 'px',
+      left: this.props.data.x + 'px'
     }}>{this.props.data.symbol}</span>
   }
 
