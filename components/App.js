@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import cx from 'classnames'
-import { Wrapper } from 'swarm-react'
 import Mice from './Mice'
 import {
   app ,
