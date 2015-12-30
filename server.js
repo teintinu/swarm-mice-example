@@ -1,4 +1,5 @@
 var webpack = require('webpack')
+var WebpackNotifierPlugin = require('webpack-notifier')
 var webpackDevMiddleware = require('webpack-dev-middleware')
 var webpackHotMiddleware = require('webpack-hot-middleware')
 var config = require('./webpack.config')
@@ -14,7 +15,8 @@ config.plugins = [
   new webpack.optimize.OccurenceOrderPlugin(),
   new webpack.optimize.DedupePlugin(),
   new webpack.HotModuleReplacementPlugin(),
-  new webpack.NoErrorsPlugin()
+  new webpack.NoErrorsPlugin(),
+  new WebpackNotifierPlugin()
 ]
 
 var compiler = webpack(config)

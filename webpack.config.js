@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.DefinePlugin({
       'process.env': {NODE_ENV: JSON.stringify('production')}
     })
-  ]);
+  ])
 } else {
   cssLoader += '&localIdentName=[name]__[local]___[hash:base64:5]'
 }
