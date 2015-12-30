@@ -7,13 +7,15 @@ import {
   online
 } from './mice.css'
 
+const FREQ = 30
+
 export default class App extends Component {
 
   constructor(props, context) {
     super(props, context)
-
+    this.timer = null
     this.state = {
-      online: true, // FIXME
+      online: true,
       connected: true // FIXME
     }
   }
@@ -32,10 +34,13 @@ export default class App extends Component {
   }
 
   handleMove(e) {
-    this.props.mouse.set({
-      x: e.pageX - 10,
-      y: e.pageY - 14
-    })
+    const x = e.clientX - 10
+    const y = e.clientY - 16
+
+    this.timer = this.timer || setTimeout(() => {
+      this.props.mouse.set({x, y})
+      this.timer = null
+    }, FREQ)
   }
 
   render() {
